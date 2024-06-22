@@ -41,6 +41,7 @@
         let LastName = document.getElementById("2name").value;
         let Phone = document.getElementById("phone").value;
         let Email = document.getElementById("email").value;
+        var contacts = [FirstName + LastName + Phone + Email]
         localStorage.setItem("FirstName", FirstName)
         localStorage.setItem("LastName", LastName)
         localStorage.setItem("PhoneNumber", Phone)
