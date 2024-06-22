@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        function AddAContactClick() 
+        {
+            location.href = '\AddAContactPage.html';
+        }
+        
+        
+        
+    </script>
+<head>
+    <title>Basic Contact List</title>
+    
+</head>
+<body style="background-color:rgb(0, 255, 255);">
+
+    <h1 style="color:rgb(255, 100, 110)">Your Contacts</h1>
+    <b id="FirstName"></b>
+    <b id="LastName"></b>
+    <p id="PhoneNumber"></p>
+    <p id="Email"></p>
+    <button type="button" style="height: 25px; width: 200px" id="AddAContact">
+        Add A Contact
+    </button>
+
+    
+
+
+
+
+
+    
+</body>
+<script type="text/javascript">
+    var firstName = localStorage.getItem("FirstName");
+    var lastName = localStorage.getItem("LastName");
+    var phone = localStorage.getItem("PhoneNumber");
+    var email = localStorage.getItem("Email");
+    document.getElementById("FirstName").innerHTML = firstName;
+    document.getElementById("LastName").innerHTML = lastName;
+    document.getElementById("PhoneNumber").innerHTML = phone;
+    document.getElementById("Email").innerHTML = email;
+
+    document.getElementById("AddAContact").onclick = AddAContactClick;
+</script>
+</html>

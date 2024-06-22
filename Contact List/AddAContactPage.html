@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AddAContact</title>
+  </head>
+    <style>
+      .backButton{
+        height: 25px;width: 250px; background-color: red; color: white;border-color: red
+      }
+
+      
+
+
+      .backButton:hover{
+        background-color: rgb(255, 117, 117);
+      }
+
+
+    </style>
+
+
+
+  <body style="background-color:rgb(0, 255, 255);">
+    
+    <input type="text" placeholder="First Name" id="1name">
+    <input type="text" placeholder="Last Name" id="2name">
+    <input type="text" placeholder="Phone Number" id="phone">
+    <input type="text" placeholder="Email" id="email">
+    <button type="button" style="height: 25px;width: 250px;" id="Submit">Submit</button>
+    <button class="backButton" type="button"  id="Back"  >Back</button>
+    
+
+    <script type="text/javascript">
+      function Back(){
+        location.href = 'http://127.0.0.1:3000/HTML%20CSS%20Projects/Contact%20List/ContactList.html';
+
+      }
+      function Submit()
+      {
+        let FirstName = document.getElementById("1name").value;
+        let LastName = document.getElementById("2name").value;
+        let Phone = document.getElementById("phone").value;
+        let Email = document.getElementById("email").value;
+        localStorage.setItem("FirstName", FirstName)
+        localStorage.setItem("LastName", LastName)
+        localStorage.setItem("PhoneNumber", Phone)
+        localStorage.setItem("Email", Email)
+        alert(FirstName + " " + LastName + ". Email: " + Email + ". Phone Number: " + Phone);
+      }
+      document.getElementById("Submit").onclick = Submit;
+      document.getElementById("Back").onclick = Back;
+
+    </script>
+  </body>
+</html> 
